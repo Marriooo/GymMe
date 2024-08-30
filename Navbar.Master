@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Navbar.master.cs" Inherits="GymMe.Layouts.Navbar" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav>
+            <h1>GymMe</h1>
+            <asp:Panel ID="CustomerPanel" runat="server" Visible="false" CssClass="nav-item">
+                <asp:LinkButton ID="LBOrderSupplement"  runat="server" OnClick="LBOrderSupplement_Click">Order Supplement</asp:LinkButton>
+                <asp:LinkButton ID="LBHistory"  runat="server" OnClick="LBHistory_Click">History</asp:LinkButton>
+                <asp:LinkButton ID="LBProfile"  runat="server" OnClick="LBProfile_Click">Profile</asp:LinkButton>
+                <asp:LinkButton ID="LBCartPage"  runat="server" OnClick="LBCartPage_Click">Cart Page</asp:LinkButton>
+                <asp:LinkButton ID="LBLogOut"  runat="server" OnClick="LBLogOut_Click">Log Out</asp:LinkButton>
+            </asp:Panel>
+            <asp:Panel ID="AdminPanel" runat="server" Visible="false" CssClass="nav-item">
+
+                <asp:LinkButton ID="LBHome" runat="server" OnClick="LBHome_Click">Home</asp:LinkButton>
+
+                <asp:LinkButton ID="LBManageSupplement"  runat="server" OnClick="LBManageSupplement_Click">Manage Supplement</asp:LinkButton>
+
+                <asp:LinkButton ID="LBOrderQueue"  runat="server" OnClick="LBOrderQueue_Click">Order Queue</asp:LinkButton>
+
+                <asp:LinkButton ID="LBHistory1"  runat="server" OnClick="LBHistory1_Click">History Page</asp:LinkButton>
+
+                <asp:LinkButton ID="LBProfile1" runat="server" OnClick="LBProfile1_Click">Profile</asp:LinkButton>
+
+                <asp:LinkButton ID="LBTReport"  runat="server" OnClick="LBTReport_Click">Transaction Report</asp:LinkButton>
+
+                <asp:LinkButton ID="LBLogOut1" runat="server" OnClick="LBLogOut1_Click">Log Out</asp:LinkButton>
+
+            </asp:Panel>
+
+
+        </nav>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <div class="card">
+        <div class="card-body">
+            <p class="card-text">@2024 GymMe All Right Reserved</p>
+        </div>
+    </div>
+</body>
+</html>
